@@ -19,7 +19,7 @@ set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall -O2")
 #   set(SOURCES main.cpp)
 #   or
 file(GLOB
-        CPP "module00/ex00/*.cpp")
+        CPP "module00/ex01/*.cpp")
 
 include_directories("${PROJECT_SOURCE_DIR}/include")
 

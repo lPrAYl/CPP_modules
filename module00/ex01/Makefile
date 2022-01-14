@@ -1,5 +1,6 @@
-NAME		=	megaphone
-SRCS		=	megaphone.cpp
+NAME		=	phonebook
+SRCS		=	$(shell find . -name "*.cpp")
+HDRS		=	$(shell find . -name "*.hpp")
 OBJS		=	$(SRCS:.cpp=.o)
 
 CC			=	clang++
@@ -16,7 +17,7 @@ all			:	$(NAME)
 			$(CC) $(CFLAGS) -c -o $@ $<
 
 $(NAME)		:	$(OBJS)
-			$(CC) -o $@ $<
+			$(CC) -o $@ $^
 
 clean		:
 			rm -rf $(OBJS)
@@ -34,4 +35,4 @@ test		:	$(NAME)
 			@echo 	  "$(PURPLE)\n----------------------------------------------------------"
 			./$(NAME)
 
-.PHONY		:	all clean fclean re test
+.PHONY		:	all clean fclean re
