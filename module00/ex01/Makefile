@@ -27,12 +27,4 @@ fclean		:	clean
 
 re			:	fclean all
 
-test		:	$(NAME)
-			@echo 	  "$(GREEN)----------------------------------------------------------"
-			./$(NAME) "shhhhh... I think the students are asleep..."
-			@echo 	  "$(BLUE)\n----------------------------------------------------------"
-			./$(NAME) Damnit " ! " "Sorry students, I thought this thing was off."
-			@echo 	  "$(PURPLE)\n----------------------------------------------------------"
-			./$(NAME)
-
 .PHONY		:	all clean fclean re
