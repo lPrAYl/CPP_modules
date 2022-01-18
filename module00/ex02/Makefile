@@ -1,5 +1,6 @@
-NAME		=	megaphone
-SRCS		=	megaphone.cpp
+NAME		=	account
+SRCS		=	$(shell find . -name "*.cpp")
+HDRS		=	$(shell find . -name "*.hpp")
 OBJS		=	$(SRCS:.cpp=.o)
 
 CC			=	clang++
@@ -16,7 +17,7 @@ all			:	$(NAME)
 			$(CC) $(CFLAGS) -c -o $@ $<
 
 $(NAME)		:	$(OBJS)
-			$(CC) -o $@ $<
+			$(CC) -o $@ $^
 
 clean		:
 			rm -rf $(OBJS)
@@ -25,13 +26,5 @@ fclean		:	clean
 			rm -rf $(NAME)
 
 re			:	fclean all
-
-test		:	$(NAME)
-			@echo 	  "$(GREEN)----------------------------------------------------------"
-			./$(NAME) "shhhhh... I think the students are asleep..."
-			@echo 	  "$(BLUE)\n----------------------------------------------------------"
-			./$(NAME) Damnit " ! " "Sorry students, I thought this thing was off."
-			@echo 	  "$(PURPLE)\n----------------------------------------------------------"
-			./$(NAME)
 
 .PHONY		:	all clean fclean re test

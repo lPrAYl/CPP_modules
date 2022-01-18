@@ -1,0 +1,10 @@
+{
+    "editor.detectIndentation": false,
+    "files.trimTrailingWhitespace": true,
+	"editor.wordWrapColumn": 80,
+    "editor.wordWrap": "wordWrapColumn",
+    "editor.tabSize": 4,
+    "editor.insertSpaces": false,
+	"editor.rulers": [80]
+}
+																																		

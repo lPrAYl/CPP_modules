@@ -1,4 +1,4 @@
-NAME		=	zombie
+NAME		=	zombieHorde
 SRCS		=	$(shell find . -name "*.cpp")
 HDRS		=	$(shell find . -name "*.hpp")
 OBJS		=	$(SRCS:.cpp=.o)

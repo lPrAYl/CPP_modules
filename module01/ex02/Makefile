@@ -1,4 +1,4 @@
-NAME		=	zombie
+NAME		=	brain
 SRCS		=	$(shell find . -name "*.cpp")
 HDRS		=	$(shell find . -name "*.hpp")
 OBJS		=	$(SRCS:.cpp=.o)

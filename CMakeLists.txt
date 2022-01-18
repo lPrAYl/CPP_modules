@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.22)
+cmake_minimum_required(VERSION 3.20)
 
 project(cmake_example)  #   project name
 
@@ -19,9 +19,20 @@ set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall -O2")
 #   set(SOURCES main.cpp)
 #   or
 file(GLOB
-        CPP "module00/ex01/*.cpp")
+        #       module00
+        #CPP "module00/ex00/*.cpp"
+        #CPP "module00/ex01/*.cpp"
+        #CPP "module00/ex02/*.cpp"
+        #       module01
+        #CPP "module01/ex00/*.cpp"
+        #CPP "module01/ex01/*.cpp"
+        #CPP "module01/ex02/*.cpp"
+        CPP "module01/ex03/*.cpp"
+        #CPP "module01/ex02/*.cpp"
+        #CPP "module01/ex02/*.cpp"
+        )
 
-include_directories("${PROJECT_SOURCE_DIR}/include")
+#include_directories("${PROJECT_SOURCE_DIR}/include")
 
 #   add_executable(${PROJECT_NAME} main.cpp)
 #   or
