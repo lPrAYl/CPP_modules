@@ -27,8 +27,8 @@ file(GLOB
         #CPP "module01/ex00/*.cpp"
         #CPP "module01/ex01/*.cpp"
         #CPP "module01/ex02/*.cpp"
-        CPP "module01/ex03/*.cpp"
-        #CPP "module01/ex02/*.cpp"
+        #CPP "module01/ex03/*.cpp"
+        CPP "module01/ex04/*.cpp"
         #CPP "module01/ex02/*.cpp"
         )
 
