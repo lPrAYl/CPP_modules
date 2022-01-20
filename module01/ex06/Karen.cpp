@@ -39,20 +39,22 @@ void	Karen::complain(std::string level) {
 		i++;
 	switch (i) {
 	case 0:
-		(this->*functionPtr[i])();
-		break;
+		std::cout << "\033[34;1m[ Debug ]\033[0m" << std::endl;
+		(this->*functionPtr[0])();
 	case 1:
-		(this->*functionPtr[i])();
-		break;
+		std::cout << "\033[32;1m[ INFO ]\033[0m" << std::endl;
+		(this->*functionPtr[1])();
 	case 2:
-		(this->*functionPtr[i])();
-		break;
+		std::cout << "\033[33;1m[ WARNING ]\033[0m" << std::endl;
+		(this->*functionPtr[2])();
 	case 3:
-		(this->*functionPtr[i])();
+		std::cout << "\033[31;1m[ ERROR ]\033[0m" << std::endl;
+		(this->*functionPtr[3])();
 		break;
 	default:
-		std::cout << "Wrong level. ";
-		std::cout << "Usage: 'DEBUG', 'INFO', 'WARNING' or 'ERROR'";
+		std::cout << "\033[35;1mWrong level. ";
+		std::cout << "Usage: \033[34;1mDEBUG\033[0m, \033[32;1mINFO\033[0m, ";
+		std::cout << "\033[33;1mWARNING\033[0m or \033[31;1mERROR\033[0m";
 		std::cout << std::endl;
 		break;
 	}

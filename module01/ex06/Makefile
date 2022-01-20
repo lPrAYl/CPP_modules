@@ -1,4 +1,4 @@
-NAME		=	phonebook
+NAME		=	karenFilter
 SRCS		=	$(shell find . -name "*.cpp")
 HDRS		=	$(shell find . -name "*.hpp")
 OBJS		=	$(SRCS:.cpp=.o)
@@ -27,4 +27,4 @@ fclean		:	clean
 
 re			:	fclean all
 
-.PHONY		:	all clean fclean re
+.PHONY		:	all clean fclean re test

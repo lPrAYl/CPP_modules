@@ -4,7 +4,7 @@ HDRS		=	$(shell find . -name "*.hpp")
 OBJS		=	$(SRCS:.cpp=.o)
 
 CC			=	clang++
-CFLAGS		=	-std=c++98 -Wall -Werror -Wextra -O2
+CFLAGS		=	-std=c++98 -pedantic -Wall -Werror -Wextra -O2
 
 GREEN		=	\033[32;1m
 BLUE		=	\033[36;1m
