@@ -1,4 +1,4 @@
-NAME		=	fixed_one
+NAME		=	fixed_two
 SRCS		=	$(shell find . -name "*.cpp")
 HDRS		=	$(shell find . -name "*.hpp")
 OBJS		=	$(SRCS:.cpp=.o)
