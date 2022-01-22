@@ -4,6 +4,7 @@
 # define FIXED_HPP
 
 # include <iostream>
+# include <cmath>
 
 class Fixed
 {
@@ -21,6 +22,9 @@ public:
 	/*	Methods					*/
 	int		getRawBits() const;
 	void	setRawBits(int const raw);
+
+	float	toFloat() const;
+	int		toInt() const;
 
 	/*	Operation overload =	*/
 	Fixed& operator=(const Fixed& other);
