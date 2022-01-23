@@ -9,7 +9,7 @@ Contacts::~Contacts() {
 const std::string	strtrim(std::string str) {
 	int	i = 0;
 	while (isspace(str[i])) {
-		++i;	
+		++i;
 	}
 	int j = str.length() - 1;
 	while (isspace(str[j])) {
@@ -19,15 +19,15 @@ const std::string	strtrim(std::string str) {
 }
 
 const std::string   Contacts::getInput(const std::string promt) {
-    std::string fieldPhoneBook;
+	std::string fieldPhoneBook;
 
-    for ( ; fieldPhoneBook.empty() && !std::cin.eof(); ) {
+	for ( ; fieldPhoneBook.empty() && !std::cin.eof(); ) {
 
-        std::cout << promt;
-        std::getline(std::cin, fieldPhoneBook);
+		std::cout << promt;
+		std::getline(std::cin, fieldPhoneBook);
 		if (fieldPhoneBook.find_first_not_of(" \t\n\r\v") == fieldPhoneBook.npos)
 			fieldPhoneBook.clear();
-    }
+	}
 	return strtrim(fieldPhoneBook);
 }
 

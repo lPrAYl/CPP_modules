@@ -8,16 +8,16 @@
 
 class PhoneBook {
 private:
-    int         id;
-    Contacts    contacts[8];
+	int			id;
+	Contacts	contacts[8];
 public:
-    PhoneBook();
-    ~PhoneBook();
+	PhoneBook();
+	~PhoneBook();
 
 	void	Promt();
 	void	Add();
 	void	Search();
-    void    printContactInfo(int);
+	void	printContactInfo(int);
 };
 
 #endif

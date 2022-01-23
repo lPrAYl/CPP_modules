@@ -3,14 +3,14 @@
 int	Zombie::index(1);
 
 Zombie::Zombie(std::string name) {
-    std::cout << "Zombie " << name << " rebelled!" << std::endl;
+	std::cout << "Zombie " << name << " rebelled!" << std::endl;
 }
 
 Zombie::Zombie() {
 }
 
 Zombie::~Zombie() {
-    std::cout << "Zombie " << name << " left us forever..." << std::endl;
+	std::cout << "Zombie " << name << " left us forever..." << std::endl;
 }
 
 void	Zombie::setName(std::string name) {
@@ -18,6 +18,6 @@ void	Zombie::setName(std::string name) {
 	index++;
 }
 
-void    Zombie::announce() {
-    std::cout << name << " BraiiiiiiinnnzzzZ..." << std::endl;
+void	Zombie::announce() {
+	std::cout << name << " BraiiiiiiinnnzzzZ..." << std::endl;
 }

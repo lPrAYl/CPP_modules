@@ -2,7 +2,7 @@
 #include <string>
 #include <fstream>
 
-void	replaceWords(std::string s1, std::string s2, std::ifstream &in, 																std::ofstream &out) {
+void	replaceWords(std::string s1, std::string s2, std::ifstream &in,std::ofstream &out) {
 	std::string	buffer;
 
 	while (std::getline(in, buffer)) {
