@@ -4,7 +4,8 @@ ClapTrap::ClapTrap(): 	_name("NoName"),
 						_hitPoints(10),
 						_energyPoints(10),
 						_attackDamage(0) {
-	std::cout << GREEN << "ClapTrap default constructor called" << RESET;std::cout << std::endl;
+	std::cout << GREEN << "ClapTrap default constructor called" << RESET;
+	std::cout << std::endl;
 }
 
 ClapTrap::ClapTrap(std::string name):
@@ -55,7 +56,7 @@ void	ClapTrap::attack(std::string const& target) {
 	else if (!_energyPoints && _hitPoints > 0)
 		std::cout << "Not enough energyPoints to attack" << std::endl;
 	else
-		std::cout << "Not enough hitPoints to attack" << std::endl;
+		std::cout << "Not enough  hitPoints to attack" << std::endl;
 }
 
 void	ClapTrap::takeDamage(unsigned int amount) {
@@ -67,12 +68,12 @@ void	ClapTrap::takeDamage(unsigned int amount) {
 void	ClapTrap::beRepaired(unsigned int amount) {
 	if (_energyPoints > 0 && _hitPoints > 0) {
 		_hitPoints += amount;
-		std::cout << "ClapTrap " << GREEN << _name << RESET << " repaired ";
+		std::cout << "ClapTrap " << GREEN << _name << RESET <<" repaired ";
 		std::cout << amount << " of damage!" << std::endl;
 		_energyPoints--;
 	}
 	else if (!_energyPoints && _hitPoints > 0)
 		std::cout << "Not enough energyPoints to repair" << std::endl;
 	else
-		std::cout << "Not enough  hitPoints to repair" << std::endl;
+		std::cout << "Not enough hitPoints to repair" << std::endl;
 }

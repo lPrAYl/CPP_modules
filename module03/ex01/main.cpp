@@ -1,9 +1,10 @@
-#include "ClapTrap.hpp"
 #include "ScavTrap.hpp"
 
 int	main() {
-	//ClapTrap	giglet("Bimbo");
-	ScavTrap	garbage("Foo");
+	ScavTrap	garbage("Trash");
 
-	garbage.attack("somebody");
+	garbage.attack("Human");
+	garbage.takeDamage(60);
+	garbage.beRepaired(80);
+	garbage.guardGate();
 }

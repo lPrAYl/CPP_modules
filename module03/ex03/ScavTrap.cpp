@@ -1,11 +1,19 @@
 #include "ScavTrap.hpp"
 
-ScavTrap::ScavTrap(): ClapTrap("NoName", 100, 50, 20) {
+ScavTrap::ScavTrap() {
+	this->_name = "NoName";
+	this->_hitPoints = 100;
+	this->_energyPoints = 50;
+	this->_attackDamage = 20;
 	std::cout << YELLOW << "ScavTrap default constructor called" << RESET;
 	std::cout << std::endl;
 }
 
-ScavTrap::ScavTrap(std::string name): ClapTrap(name, 100, 50, 20) {
+ScavTrap::ScavTrap(std::string name) {
+	this->_name = name;
+	this->_hitPoints = 100;
+	this->_energyPoints = 50;
+	this->_attackDamage = 20;
 	std::cout << YELLOW << "ScavTrap constructor with name called" << RESET;
 	std::cout << std::endl;
 }
@@ -29,12 +37,11 @@ void	ScavTrap::attack(std::string const& target) {
 	else if (!_energyPoints && _hitPoints > 0)
 		std::cout << "Not enough energyPoints to attack" << std::endl;
 	else
-		std::cout << "Not enough  hitPoints to attack" << std::endl;
+		std::cout << "Not enough hitPoints to attack" << std::endl;
 }
 
 void	ScavTrap::guardGate() {
-	std::cout << YELLOW << _name << " has entered in Gate keeper mode" << RESET;
-	std::cout << std::endl;
+	std::cout << YELLOW << "ScavTrap has entered in Gate keeper mode" << RESET;std::cout << std::endl;
 }
 
 ScavTrap const&	ScavTrap::operator=(ScavTrap const& other) {

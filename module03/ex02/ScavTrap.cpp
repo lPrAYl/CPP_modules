@@ -22,7 +22,7 @@ ScavTrap::ScavTrap(const ScavTrap& other) {
 void	ScavTrap::attack(std::string const& target) {
 	if (_energyPoints > 0 && _hitPoints > 0) {
 		std::cout << "ScavTrap " << YELLOW << _name << RESET << " attack ";
-		std::cout << BLUE << target << RESET << ", causing ";
+		std::cout << BLUE << target << RESET <<", causing ";
 		std::cout << _attackDamage << " of damage!" << std::endl;
 		_energyPoints--;
 	}
@@ -33,8 +33,7 @@ void	ScavTrap::attack(std::string const& target) {
 }
 
 void	ScavTrap::guardGate() {
-	std::cout << YELLOW << _name << " has entered in Gate keeper mode" << RESET;
-	std::cout << std::endl;
+	std::cout << YELLOW << "ScavTrap has entered in Gate keeper mode" << RESET;std::cout << std::endl;
 }
 
 ScavTrap const&	ScavTrap::operator=(ScavTrap const& other) {
