@@ -1,9 +1,8 @@
 #include "Dog.hpp"
 #include "Cat.hpp"
-#include "WrongCat.hpp"
 
 int	main() {
-	const Animal*	animals[4];
+	Animal const*	animals[4];
 
 	for (int i = 0; i < 2; i++)
 		animals[i] = new Cat;
