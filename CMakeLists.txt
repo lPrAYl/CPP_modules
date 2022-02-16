@@ -35,7 +35,14 @@ file(GLOB
         #CPP "module02/ex01/*.cpp"
         #CPP "module02/ex02/*.cpp"
         #CPP "module02/ex03/*.cpp"
-        CPP "module03/ex01/test.cpp"
+        #CPP "module03/ex00/*.cpp"
+        #CPP "module03/ex01/*.cpp"
+        #CPP "module03/ex02/*.cpp"
+        #CPP "module03/ex03/*.cpp"
+        #CPP "module04/ex00/*.cpp"
+        #CPP "module04/ex01/*.cpp"
+        #CPP "module04/ex02/*.cpp"
+        CPP "module04/ex03/*.cpp"
         )
 
 #include_directories("${PROJECT_SOURCE_DIR}/include")
