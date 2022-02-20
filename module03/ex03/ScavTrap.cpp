@@ -41,7 +41,8 @@ void	ScavTrap::attack(std::string const& target) {
 }
 
 void	ScavTrap::guardGate() {
-	std::cout << YELLOW << "ScavTrap has entered in Gate keeper mode" << RESET;std::cout << std::endl;
+	std::cout << YELLOW << "ScavTrap has entered in Gate keeper mode" << RESET;
+	std::cout << std::endl;
 }
 
 ScavTrap const&	ScavTrap::operator=(ScavTrap const& other) {

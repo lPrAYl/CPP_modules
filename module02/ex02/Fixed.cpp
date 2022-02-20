@@ -68,12 +68,12 @@ Fixed	Fixed::operator/(const Fixed &other) {
  
 Fixed	Fixed::operator++(int) {
 	Fixed	result(*this);
-	this->fixedPoint++;
+	this->fixedPoint += 1 << fractionalBits;
 	return result;
 }
 
 Fixed&	Fixed::operator++() {
-	this->fixedPoint++;
+	this->fixedPoint += 1 << fractionalBits;
 	return *this;
 }
 
