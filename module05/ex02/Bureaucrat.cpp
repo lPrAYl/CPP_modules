@@ -50,10 +50,20 @@ void	Bureaucrat::gradeDown() {
 	}
 }
 
-void	Bureaucrat::signForm(Form cosnt& form) const {
+void	Bureaucrat::signForm(Form& form) const {
 	try {
 		form.beSigned(*this);
 	} catch (Bureaucrat::GradeTooLowException& e) {
+		std::cout << e.what() << std::endl;
+	}
+}
+
+void	Bureaucrat::executeForm(Form& form) const {
+	try {
+		form.execute(*this);
+	} catch (Bureaucrat::GradeTooLowException& e) {
+		std::cout << e.what() << std::endl;
+	} catch (Form::FormIsNotSignedException& e) {
 		std::cout << e.what() << std::endl;
 	}
 }

@@ -60,7 +60,7 @@ int					Form::getGradeToExecute() const { return _gradeToExecute; }
 
 /****************************** Methods ******************************/
 
-void			Form::beSigned(const Bureaucrat &bureaucrat) {
+void	Form::beSigned(const Bureaucrat &bureaucrat) {
 	if (bureaucrat.getGrade() <= _gradeToSign && !_isSigned) {
 		_isSigned = true;
 		std::cout << BLUE << bureaucrat.getName() << RESET << " signed ";
@@ -72,6 +72,19 @@ void			Form::beSigned(const Bureaucrat &bureaucrat) {
 	}
 	else {
 		std::cout << BLUE << bureaucrat.getName() << RESET << " couldn't sign ";
+		std::cout << YELLOW << _name << RESET << " because ";
+		throw Bureaucrat::GradeTooLowException();
+	}
+}
+
+void	Form::execute(const Bureaucrat &executor) const {
+	if (!_isSigned) {
+		std::cout << BLUE << executor.getName() << RESET << " couldn't execute ";
+		std::cout << YELLOW << _name << RESET << " because ";
+		throw FormIsNotSignedException();
+	}
+	if (executor.getGrade() > _gradeToExecute) {
+		std::cout << BLUE << executor.getName() << RESET << " couldn't execute ";
 		std::cout << YELLOW << _name << RESET << " because ";
 		throw Bureaucrat::GradeTooLowException();
 	}
@@ -99,10 +112,17 @@ Form::GradeTooHighException::~GradeTooHighException() throw() {}
 Form::GradeTooLowException::GradeTooLowException() {}
 Form::GradeTooLowException::~GradeTooLowException() throw() {}
 
+Form::FormIsNotSignedException::FormIsNotSignedException() {}
+Form::FormIsNotSignedException::~FormIsNotSignedException() throw() {}
+
 const char* Form::GradeTooHighException::what() const throw() {
-	return "\x1B[0;95m grade is too high!\033[0m";
+	return "\x1B[0;91m grade is too high!\033[0m";
 }
 
 const char* Form::GradeTooLowException::what() const throw() {
 	return "\x1B[0;95m grade is too low!\033[0m";
+}
+
+const char* Form::FormIsNotSignedException::what() const throw() {
+	return "\x1B[0;91mThe form has not been signed!\033[0m";
 }
