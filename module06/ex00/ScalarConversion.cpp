@@ -19,11 +19,16 @@ ScalarConversion::~ScalarConversion() {}
 
 void	ScalarConversion::getChar(char *str) {
 	try {
-		_conversionToChar = static_cast<char>(std::stoi(str));
+		if (strlen(str) == 1 && isprint(str[0]))
+			_conversionToChar = *str;
+		else if (str[0] == '.')
+			_conversionToChar = static_cast<int>(std::atoi(str));
+		else
+			_conversionToChar = static_cast<char>(std::stoi(str));
 		if (!isprint(_conversionToChar))
 			std::cout << "char:\t" << YELLOW << "Non displayable" << RESET << std::endl;
 		else
-			std::cout << "char:\t" << GREEN << static_cast<char*>(str) << RESET << std::endl;
+			std::cout << "char:\t" << GREEN << _conversionToChar << RESET << std::endl;
 	} catch (std::exception& e) {
 		std::cout << "char:\t" << RED << "impossible" << RESET << std::endl;
 	}
@@ -31,7 +36,12 @@ void	ScalarConversion::getChar(char *str) {
 
 void	ScalarConversion::getInt(char *str) {
 	try {
-		_conversionToInt = static_cast<int>(std::stoi(str));
+		if (strlen(str) == 1 && !isdigit(str[0]))
+			_conversionToInt = static_cast<int>(str[0]);
+		else if (str[0] == '.')
+			_conversionToInt = static_cast<int>(std::atoi(str));
+		else
+			_conversionToInt = static_cast<int>(std::stoi(str));
 		std::cout << "int:\t" << GREEN << _conversionToInt << RESET << std::endl;
 	} catch (std::exception& e) {
 		std::cout << "int:\t" << RED << "impossible" << RESET << std::endl;
@@ -40,7 +50,10 @@ void	ScalarConversion::getInt(char *str) {
 
 void	ScalarConversion::getFloat(char *str) {
 	try {
-		_conversionToFloat = static_cast<float>(std::stof(str));
+		if (strlen(str) == 1 && !isdigit(str[0]))
+			_conversionToFloat = static_cast<float>(str[0]);
+		else
+			_conversionToFloat = static_cast<float>(std::stof(str));
 		std::cout << "float:\t" << GREEN << _conversionToFloat << "f" << RESET << std::endl;
 	} catch (std::exception& e) {
 		std::cout << "float:\t" << RED << "impossible" << RESET << std::endl;
@@ -49,7 +62,10 @@ void	ScalarConversion::getFloat(char *str) {
 
 void	ScalarConversion::getDouble(char *str) {
 	try {
-		_conversionToDouble = static_cast<double>(std::stod(str));
+		if (strlen(str) == 1 && !isdigit(str[0]))
+			_conversionToDouble = static_cast<double>(str[0]);
+		else
+			_conversionToDouble = static_cast<double>(std::stod(str));
 		std::cout << "double:\t" << GREEN << _conversionToDouble << RESET << std::endl;
 	} catch (std::exception& e) {
 		std::cout << "double:\t" << RED << "impossible" << RESET << std::endl;

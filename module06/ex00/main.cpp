@@ -7,7 +7,5 @@ int	main(int argc, char* argv[]) {
 		ScalarConversion	conversion(argv[1]);
 	}
 
-	std::cout << static_cast<char>("as") << std::endl;
 	return 0;
 }
-

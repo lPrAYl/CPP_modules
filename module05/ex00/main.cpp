@@ -25,6 +25,7 @@ int main() {
 	std::cout << bureaucrat_1 << std::endl;
 	std::cout << bureaucrat_2 << std::endl;
 	std::cout << bureaucrat_3 << std::endl;
+	std::cout << std::endl;
 
 	std::cout << BLUE << "UP AND DOWN METHODS CALL" << RESET << std::endl;
 

@@ -7,11 +7,11 @@ int main() {
 	Bureaucrat	bureaucrat2("John", 1);
 	Bureaucrat	bureaucrat3("Bob", 75);
 	bureaucrat1.signForm(blanc1);
-	std::cout << blanc1 << std::endl;
+	std::cout << std::endl << blanc1 << std::endl;
 	bureaucrat2.signForm(blanc1);
-	std::cout << blanc1 << std::endl;
+	std::cout << std::endl << blanc1 << std::endl;
 	bureaucrat3.signForm(blanc1);
-	std::cout << blanc1 << std::endl;
+	std::cout << std::endl << blanc1 << std::endl;
 
 	return 0;
 }

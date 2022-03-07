@@ -5,7 +5,7 @@ int main(int argc, char **argv) {
 		for (int i = 1; i < argc; i++) {
 			for (int j = 0; argv[i][j]; j++) {
 				if (isalpha(argv[i][j]))
-					std::cout << static_cast<char>(toupper(argv[i][j]));
+					std::cout << toupper(argv[i][j]);
 				else
 					std::cout << argv[i][j];
 			}

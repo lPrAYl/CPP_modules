@@ -12,8 +12,8 @@
 class ScalarConversion {
 private:
 	char	*_str;
-	int 	_conversionToChar;
-	long 	_conversionToInt;
+	char	_conversionToChar;
+	long	_conversionToInt;
 	float	_conversionToFloat;
 	double	_conversionToDouble;
 

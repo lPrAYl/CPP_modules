@@ -11,7 +11,7 @@ Dog::~Dog() {
 
 Dog::Dog(Dog const& other): Animal(other._type),
 							_brain(new Brain(*other._brain)) {
-	std::cout << GREEN << "[Dog]" << RESET << " copy constructor called";
+	std::cout << GREEN << "[Dog]" << RESET << " copy constructor called" << std::endl;
 }
 
 Dog const&	Dog::operator=(Dog const& other) {

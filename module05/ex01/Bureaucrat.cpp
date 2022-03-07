@@ -50,7 +50,7 @@ void	Bureaucrat::gradeDown() {
 	}
 }
 
-void	Bureaucrat::signForm(Form cosnt& form) const {
+void	Bureaucrat::signForm(Form& form) const {
 	try {
 		form.beSigned(*this);
 	} catch (Bureaucrat::GradeTooLowException& e) {
