@@ -2,7 +2,6 @@
 
 struct Data {
 	int	i;
-	int	j;
 };
 
 uintptr_t	serialize(Data* ptr) {
@@ -20,7 +19,7 @@ int	main() {
 
 	data1->i = 42;
 	std::cout << "data1->i\t" << data1->i << std::endl;
-	std::cout << "data1\t\t" << &*data1 << std::endl;
+	std::cout << "data1\t\t" << data1 << std::endl;
 	std::cout << "&data1\t\t" << &data1 << std::endl << std::endl;
 
 	ptr = serialize(data1);
