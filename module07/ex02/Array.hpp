@@ -14,14 +14,16 @@ private:
 public:
 	Array();
 	Array(unsigned int);
-	Array<T>(Array& other);
+	Array(Array& other);
 	virtual ~Array();
 
-	T&	operator[](int index);
-	Array<T>&	operator=(Array<T>& other);
+	T&	operator[](unsigned int index);
+	Array&	operator=(Array& other);
 
-	unsigned int size();
+	unsigned int size() const;
 };
+
+# include "Array.tpp"
 
 template<typename T>
 std::ostream& operator<<(std::ostream& out, Array<T> const& data);

@@ -1,6 +1,6 @@
-NAME		=	ex02
+NAME		=	ex00
 SRCS		=	$(shell find . -name "*.cpp")
-HDRS		=	$(shell find . -name "*.(h | c)pp")
+HDRS		=	$(shell find . -name "*.hpp")
 OBJS		=	$(SRCS:.cpp=.o)
 
 CC			=	clang++
