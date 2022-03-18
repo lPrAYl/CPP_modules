@@ -5,6 +5,12 @@
 
 # include <iostream>
 # include <vector>
-# include <algorithm>
+# include <list>
+# include "colors.hpp"
+
+template<typename T>
+void	easyfind(T& container, int num);
+
+# include "easyfind.tpp"
 
 #endif
