@@ -6,6 +6,5 @@ int	main(int argc, char* argv[]) {
 	else {
 		ScalarConversion	conversion(argv[1]);
 	}
-
 	return 0;
 }
